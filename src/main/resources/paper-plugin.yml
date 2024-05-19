@@ -1,0 +1,5 @@
+name: Core
+version: '${version}'
+main: com.arcunis.core.Core
+api-version: '1.20'
+load: STARTUP
