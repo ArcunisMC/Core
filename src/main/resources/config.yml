@@ -1,0 +1,6 @@
+debug: false
+database:
+  type: "sqlite" # sqlite or mysql
+  database: database.db # The file or the url where the database is located
+  username: root
+  password: root
