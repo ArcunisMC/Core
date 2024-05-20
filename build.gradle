@@ -24,7 +24,6 @@ repositories {
 
 dependencies {
     compileOnly "io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT"
-//    compileOnly 'com.github.ArcunisMC:Core:8be424b42b'
 }
 
 sourceCompatibility = 21
