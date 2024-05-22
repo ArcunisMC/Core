@@ -50,4 +50,8 @@ public final class Core extends JavaPlugin {
 
         return conn;
     }
+
+    public void debug(JavaPlugin plugin, String msg) {
+        if (getConfig().getBoolean("debug")) plugin.getLogger().info("[DEBUG] " + msg);
+    }
 }
