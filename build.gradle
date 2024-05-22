@@ -12,6 +12,9 @@ repositories {
         name = "papermc-repo"
         url = "https://repo.papermc.io/repository/maven-public/"
     }
+    maven {
+        url = uri("https://repo.maven.apache.org/maven2/")
+    }
     maven { url "https://jitpack.io" }
     maven {
         name = "sonatype"
@@ -32,5 +35,17 @@ processResources {
     filteringCharset 'UTF-8'
     filesMatching('paper-plugin.yml') {
         expand props
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.arcunis'
+            artifactId = 'core'
+            version = version
+
+            from components.java
+        }
     }
 }
