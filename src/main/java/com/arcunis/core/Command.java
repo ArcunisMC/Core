@@ -14,13 +14,13 @@ public abstract class Command extends org.bukkit.command.Command {
     protected JavaPlugin plugin;
     private boolean playerOnly = false;
 
-    Command(@NotNull JavaPlugin plugin, @NotNull String name) {
+    public Command(@NotNull JavaPlugin plugin, @NotNull String name) {
         super(name);
         this.plugin = plugin;
         register();
     }
 
-    Command(@NotNull JavaPlugin plugin, @NotNull String name, @NotNull String description, @NotNull String usage, @NotNull List<String> aliases) {
+    public Command(@NotNull JavaPlugin plugin, @NotNull String name, @NotNull String description, @NotNull String usage, @NotNull List<String> aliases) {
         super(name, description, usage, aliases);
         this.plugin = plugin;
         register();
